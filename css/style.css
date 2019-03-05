@@ -111,25 +111,38 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-#header #logo img {
-  padding: 0;
-  margin: 0;
+#header.header-fixed {
+  background: rgba(52, 59, 64, 0.9);
+  padding: 20px 0;
+  height: 100px;
+  transition: all 0.5s;
+}
+
+#header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-without-text{
+  display: none;
 }
 
 @media (max-width: 768px) {
   #header #logo h1 {
     font-size: 26px;
   }
-  #header #logo img {
-    max-height: 40px;
+  .logo-with-text{
+    display: none;
   }
-}
-
-#header.header-fixed {
-  background: rgba(52, 59, 64, 0.9);
-  padding: 20px 0;
-  height: 72px;
-  transition: all 0.5s;
+  .logo-without-text{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    margin: 20px 0 0px 20px;
+    display: block;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -151,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
   bottom: 0;
   top: 0;
