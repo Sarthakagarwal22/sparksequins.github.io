@@ -98,9 +98,6 @@ jQuery(document).ready(function($) {
       type: "POST",
       url: action,
       data: str,
-      header:{
-        'Access-Control-Allow-Headers': 'x-requested-with' 
-      },
       success: function(msg) {
         // alert(msg);
         if (msg == 'OK') {
